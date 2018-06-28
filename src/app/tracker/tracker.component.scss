@@ -1,0 +1,79 @@
+$numpadBg: #202628;
+$numpadText: #ffdf46;
+
+.tracker-container {
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .result-container {
+        padding: 20px;
+        background: #4a4a4a;
+    }
+
+    .tracker-info {
+        height: 40px;
+    }
+
+    .result {
+        margin: 40px 0;
+        font-size: 42px;
+        transition: linear .2s all;
+    }
+
+    .week, .out-of-total {
+        float: left;
+        width: 50%;
+    }
+
+    .week {
+        text-align: left;
+    }
+    .out-of-total {
+        text-align: right;
+    }
+
+    .numpad {
+        clear: both;
+        flex-wrap: wrap-reverse;
+        display: flex;
+        button {
+            display: flex;
+            justify-content: center;
+            background: $numpadBg;
+            color: $numpadText;
+            font-size: 24px;
+            border: none;
+            text-align: center;
+            width: 33.3%;
+            padding: 30px;
+            box-sizing: border-box;
+            cursor:pointer;
+            outline: none;
+
+            &::after {
+                content: "";
+                background: red;
+                height: 10px;
+                height: 10px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                display: block;
+            }
+
+            &.delete-btn {
+                background-image: url('/assets/delete-btn.svg');
+                background-size: 40px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

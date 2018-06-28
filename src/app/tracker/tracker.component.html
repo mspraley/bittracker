@@ -1,0 +1,18 @@
+<div class="tracker-container">
+    <div class="result-container">
+      <h2 class="result-label">Pushups</h2>
+      <div class="result" [@resultChange]="resultAnimation">{{getResult()}}</div>
+      <div class="tracker-info">
+          <div class="week">Week {{week}}</div>
+          <div class="out-of-total">{{current}}/{{total}}</div>
+      </div>
+    </div>
+    <ul class="numpad">
+      <button *ngFor="let key of additionalKeys" class="{{key}}-btn" (click)="executeUniqueKey(key)">
+        <span *ngIf="key != 'delete'">{{key}}</span>
+      </button>
+      <button *ngFor="let num of nums" (click)="appendNumeric(num)">
+          {{num}}
+      </button>
+    </ul>
+  </div>

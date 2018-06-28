@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('bitcalculator App', () => {
+describe('bittracker App', () => {
   let page: AppPage;
 
   beforeEach(() => {
