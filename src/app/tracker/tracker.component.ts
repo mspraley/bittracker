@@ -8,13 +8,13 @@ import { trigger,style,transition,animate,keyframes,state,query,stagger } from '
   animations : [
     trigger('resultChange', [
       state('static', style({
-        'color' : '#fff'
+        'display' : 'block'
       })),
       state('valid', style({
-        'color': '#fff',
+        'display' : 'block'
       })),
       state('invalid', style({
-        'color': '#fff',
+        'display' : 'block'
       })),
       transition('static <=> valid', animate(300, keyframes([
         style({ transform: 'scale(1.05)', offset: 0}),
